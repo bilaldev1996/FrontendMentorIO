@@ -5,7 +5,7 @@
 *.sketch
 *.fig
 node_modules/
-src/
+src/sass
 design/
 package.json
 package-lock.json
