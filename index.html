@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+      <title>Frontend Mentor | E-commerce product page</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="build/css/app.css">
+      <script src="src/js/app.js"></script>
+    </head>
+    <body>
+      <header class="container-xl my-4">
+        <div class="row align-items-md-center">
+          <div class="col-1 col-md-0 me-2">
+            <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasStart">
+              <img src="build/img/icon-menu.svg" alt="boton menu">
+            </button>
+          </div>
+          <div class="col col-md-2">
+            <h1 class="fw-bold ">sneakers</h1>
+          </div>
+          <div class="col-md-6 navegacion">
+            <nav class="nav d-flex gap-4">
+              <a href="#" class="nav-link">Collections</a>
+              <a href="#" class="nav-link">Men</a>
+              <a href="#" class="nav-link">Women</a>
+              <a href="#" class="nav-link">About</a>
+              <a href="#" class="nav-link">Contact</a>
+            </nav>
+          </div>
+          <div class="col col-md-2 d-flex gap-3 gap-md-5 justify-content-end align-items-center">
+            <div class="carrito pt-md-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button class="btn position-relative" href="#">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                  <!-- Con JS -->
+                </span>
+                <img src="build/img/icon-cart.svg" alt="Imagen carrito">
+              </button>
+            </div>
+            <div class="avatar" >
+              <a href="#">
+                <img src="build/img/image-avatar.png" alt="Imagen avatar" height="35" width="35">
+              </a>
+            </div>
+          </div>
+        </div><!-- Row -->
+        <div class="offcanvas offcanvas-start" 
+        tabindex="-1" data-bs-backdrop="true"
+        id="offcanvasStart">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="#" class="nav-link">Collections</a>
+                <a href="#" class="nav-link">Men</a>
+                <a href="#" class="nav-link">Women</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+        </div>
+      </header>
+      <!-- Modal carrito-->
+      <div class="modal-sm modal fade position-absolute" id="exampleModal" tabindex="-1"
+      data-bs-backdrop="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold">Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start text-info p-3 cartBody">
+              <!-- Con JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <main class="container-xl mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-6 imagen">
+            <img src="build/img/image-product-1.jpg" alt="Imagen producto 1" class="img-fluid rounded-1 imagenPrincipal " height="70" width="500">
+          </div>
+          <div class="col-md-6 pt-5 text-center text-md-start">
+            <h3 class="text-primary fs-4 fw-bold">Sneaker Company</h3>
+            <h1 class="fw-bold display-4 mb-5">Fall Limited Edition Sneakers</h1>
+            <p class="text-info">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+              durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+            <div class="precio d-flex gap-4">
+              <p class="fw-bold fs-3 m-0">$125.00</p>
+              <span class="text-primary mt-2 bg-secondary">50%</span>
+            </div>
+            <a class="text-info text-decoration-line-through  d-block text-start">$250.00</a>
+            <div class="row mt-4 rounded-1">
+              <div class="col-md-6 bg-secondary mb-3 p-2 mb-md-0 p-2 p-md-0 ">
+                <div class="row p-1">
+                  <div class="col-3 ">
+                    <button href="#" class="restar btn">
+                      <img src="build/img/icon-minus.svg" alt="icono menos">
+                    </button>
+                  </div>
+                  <div class="col-6 text-center fw-bold">
+                    <span class="count d-block mt-2"></span>
+                  </div>
+                  <div class="col-3 text-end">
+                    <button href="#" class="sumar btn">
+                      <img src="build/img/icon-plus.svg" alt="icono mas">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 bg-primary text-white text-center p-2 p-md-0">
+                <!-- <img src="build/img/icon-cart.svg" class="cart" alt=""> -->
+                <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="currentColor" fill-rule="nonzero"/></svg>
+                <button class="btn text-white addCart">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div><!-- ROW 1 -->
+        <div class="row mt-md-3 smallImages">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-3 tumb">
+                <a href="#">
+                  <img src="build/img/image-product-1-thumbnail.jpg" alt="" class="img-fluid hov img">
+                </a>
+              </div>
+              <div class="col-md-3 tumb">
+                <a href="#">
+                  <img src="build/img/image-product-2-thumbnail.jpg" alt="" class="img-fluid img">
+                </a>
+              </div>
+              <div class="col-md-3 tumb">
+                <a href="#">
+                  <img src="build/img/image-product-3-thumbnail.jpg" alt="" class="img-fluid img">
+                </a>
+              </div>
+              <div class="col-md-3 tumb">
+                <a href="#">
+                  <img src="build/img/image-product-4-thumbnail.jpg" alt="" class="img-fluid img">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Modal imagenPrincipal -->
+      <div class="modal fade " id="imagenModal" tabindex="-1"
+      data-bs-backdrop="false">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- carrousel imagenes -->
+              <div id="indicadores" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="build/img/image-product-1.jpg" alt="slide 1" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="build/img/image-product-2.jpg" alt="slide 1" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="build/img/image-product-3.jpg" alt="slide 1" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="build/img/image-product-4.jpg" alt="slide 1" class="d-block w-100">
+                  </div>
+                  <button type="button" class="carousel-control-prev" data-bs-target="#indicadores" data-bs-slide="prev">
+                    <!-- <span class="carousel-control-prev-icon text"></span> -->
+                    <img src="build/img/icon-previous.svg" alt=""  class="prev">
+                </button>
+                <button type="button" class="carousel-control-next" data-bs-target="#indicadores" data-bs-slide="next">
+                    <!-- <span class="carousel-control-next-icon"></span> -->
+                    <img src="build/img/icon-next.svg" alt="" class="next">
+                </button>
+            </div>
+            </div>
+            </div><!-- Modal body -->
+            <div class="modal-footer">
+              <div class="row">
+                <div class="col-md-3 tumb">
+                  <a href="#">
+                    <img src="build/img/image-product-1-thumbnail.jpg" alt="imagen modal-thumbail" class="img-fluid image-modal hov">
+                  </a>
+                </div>
+                <div class="col-md-3 tumb">
+                  <a href="#">
+                    <img src="build/img/image-product-2-thumbnail.jpg" alt="imagen modal-thumbail" class="img-fluid image-modal">
+                  </a>
+                </div>
+                <div class="col-md-3 tumb">
+                  <a href="#">
+                    <img src="build/img/image-product-3-thumbnail.jpg" alt="imagen modal-thumbail" class="img-fluid image-modal">
+                  </a>
+                </div>
+                <div class="col-md-3 tumb">
+                  <a href="#">
+                    <img src="build/img/image-product-4-thumbnail.jpg" alt="imagen modal-thumbail" class="img-fluid image-modal">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
